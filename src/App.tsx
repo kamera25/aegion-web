@@ -5,8 +5,8 @@ import './App.css';
 function Home() {
   return (
     <header className="App-header">
-      <h1>AR Board Game</h1>
-      <p>The future of tabletop gaming is here.</p>
+      <h1>Aegion</h1>
+      <p>これは 見えざる者 と 見える者 との戦いも物語</p>
     </header>
   );
 }
@@ -52,7 +52,17 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
         <Container>
-          <Navbar.Brand href="#home">AR Board Game</Navbar.Brand>
+<Navbar.Brand href="#home">
+  <img
+    src="/logo.png"
+    width="30"
+    height="30"
+    className="d-inline-block align-top"
+    alt="Aegion"
+  />
+  {' '}
+</Navbar.Brand>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
