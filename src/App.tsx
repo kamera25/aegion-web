@@ -1,6 +1,6 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserPage from './UserPage';
 import Header from './header';
