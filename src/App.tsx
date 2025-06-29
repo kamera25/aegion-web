@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import UserPage from './UserPage';
+import Header from './header';
 
 function Home() {
   return (
@@ -16,17 +17,17 @@ function Home() {
 function About() {
   return (
     <Container className="my-5">
-      <h2>このゲームについて</h2>
 <section>
-  <p><strong>Aegion - エイジオン</strong></p>
+  <h2><strong>Aegion - エイジオン</strong></h2>
+  <p>A TACTICAL AR BOAD GAME</p>
 
-  <h3>🧩 プレイ人数：</h3>
+  <h4>🧩 プレイ人数：</h4>
   <p>2〜4人（協力プレイ）</p>
 
-  <h3>⏱ 所要時間：</h3>
+  <h4>⏱ 所要時間：</h4>
   <p>1プレイ 約40〜60分</p>
 
-  <h3>📦 内容物：</h3>
+  <h4>📦 内容物：</h4>
   <ul>
     <li>ボスカード × 5枚</li>
     <li>マスカード × 60枚（攻撃／防御／特殊カード含む）</li>
@@ -90,35 +91,6 @@ function News() {
       <p>2025年6月29日(日) : <a href='https://asokuro.com/gamemarche-3/'>第4回 たちまちゲームマルシェ</a> に本ゲームを出展します！</p>
     </Container>
   );
-}
-
-function Header () {
-  return (
-      <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-        <Container>
-          <Navbar.Brand as={Link} to="/">
-            <img
-              src={`${process.env.PUBLIC_URL}/logo.png`}
-              width="100"
-              height="30"
-              className="d-inline-block align-top"
-              alt="Aegion"
-            />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#about">製品について</Nav.Link>
-              <Nav.Link href="#story">ストーリー</Nav.Link>
-              <Nav.Link href="#how-to-play">遊び方</Nav.Link>
-              <Nav.Link href="#gallery">ギャラリー</Nav.Link>
-              <Nav.Link href="#news">ニュース</Nav.Link>
-              <Nav.Link as={Link} to="/userpage">ユーザーページ</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    );
 }
 
 function AppHome() {
