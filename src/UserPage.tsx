@@ -43,7 +43,7 @@ function AppRestrict() {
 function AppUpdateInfo() {
   return (
     <Container className="my-5">
-      <h1>アプリの修正履歴</h1>
+      <h2>アプリの修正履歴</h2>
       <p>2025年7月13日 : 最初のバージョンの公開を行いました</p>
     </Container>
   );
