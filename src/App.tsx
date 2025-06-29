@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import { Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserPage from './UserPage';
 import Header from './header';
@@ -123,10 +123,12 @@ function AppHome() {
 
 function App() {
   return (
+    <HashRouter>
        <Routes>
            <Route path="/" element={<AppHome />} />
            <Route path="/userpage" element={<UserPage />} />
        </Routes>
+    </HashRouter>
   );
 }
 
