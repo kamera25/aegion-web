@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aegion-web/static/css/main.fb0c1392.css",
+    "main.js": "/aegion-web/static/js/main.09611b03.js",
+    "static/js/453.5c8518f4.chunk.js": "/aegion-web/static/js/453.5c8518f4.chunk.js",
+    "index.html": "/aegion-web/index.html",
+    "main.fb0c1392.css.map": "/aegion-web/static/css/main.fb0c1392.css.map",
+    "main.09611b03.js.map": "/aegion-web/static/js/main.09611b03.js.map",
+    "453.5c8518f4.chunk.js.map": "/aegion-web/static/js/453.5c8518f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb0c1392.css",
+    "static/js/main.09611b03.js"
+  ]
+}
