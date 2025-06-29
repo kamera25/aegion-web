@@ -12,6 +12,29 @@
   text-align: center;
 }
 
+h2 {
+    background-color: #f0f0f0; /* A light gray background */
+    color: #333; /* Dark gray text color */
+    padding: 15px 20px; /* Adjust padding as needed (top/bottom, left/right) */
+    border-left: 5px solid #666; /* A dark gray left border. Adjust color and width as desired. */
+    margin: 20px 0; /* Add some margin above/below the heading for spacing */
+}
+
+.footer1 {
+    background-color: #282c34; /* 背景色を黒に設定 */
+    color: #fff; /* テキストの色を白に設定 */
+    padding: 20px 0; /* 上下のパディングを設定 */
+    text-align: center; /* テキストを中央揃えにする */
+    margin-top: auto; /* フッターを一番下に押しやる */
+    font-size: small;
+    width: 99vw;
+    margin: 0 calc(50% - 50vw);
+}
+
+.footer1 a:visited {
+    color: #B0C4DE; /* やや濃いめの青 (例) */
+}
+
 .download-button {
   background-color: #007bff; /* 青色 */
   color: white;              /* 白い文字 */

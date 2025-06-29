@@ -4,6 +4,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserPage from './UserPage';
 import Header from './header';
+import Footer from './footer';
 
 function Home() {
   return (
@@ -25,7 +26,7 @@ function About() {
   <p>2〜4人（協力プレイ）</p>
 
   <h4>⏱ 所要時間：</h4>
-  <p>1プレイ 約40〜60分</p>
+  <p>1プレイ 約20〜30分</p>
 
   <h4>📦 内容物：</h4>
   <ul>
@@ -117,6 +118,7 @@ function AppHome() {
           <News />
         </div>
 
+        <Footer />
       </div>
     );
 }

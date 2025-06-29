@@ -2,6 +2,7 @@ import React from 'react';
 import { Container } from 'react-bootstrap';
 import './App.css';
 import Header from './header';
+import Footer from './footer';
 
 function AppDownload() {
   return (
@@ -108,6 +109,8 @@ function UserPageApp() {
         <div id="support">
           <Support />
         </div>
+
+        <Footer />
       </div>
  );
 }
