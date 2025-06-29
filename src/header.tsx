@@ -19,11 +19,7 @@ function Header () {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/#about">製品について</Nav.Link>
-              <Nav.Link href="/#story">ストーリー</Nav.Link>
-              <Nav.Link href="/#how-to-play">遊び方</Nav.Link>
-              <Nav.Link href="/#gallery">ギャラリー</Nav.Link>
-              <Nav.Link href="/#news">ニュース</Nav.Link>
+              <Nav.Link as={Link} to="/">ホーム</Nav.Link>
               <Nav.Link as={Link} to="/userpage">ユーザーページ</Nav.Link>
             </Nav>
           </Navbar.Collapse>
