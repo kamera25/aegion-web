@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
+import UserPage from './UserPage';
 
 function Home() {
   return (
@@ -14,7 +16,7 @@ function Home() {
 function About() {
   return (
     <Container className="my-5">
-      <h2>このゲームについて</h2>  
+      <h2>このゲームについて</h2>
 <section>
   <p><strong>Aegion - エイジオン</strong></p>
 
@@ -90,22 +92,19 @@ function News() {
   );
 }
 
-function App() {
+function Header () {
   return (
-    <div className="App">
       <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
         <Container>
-<Navbar.Brand href="#home">
-  <img
-    src={`${process.env.PUBLIC_URL}/logo.png`}
-    width="100"
-    height="30"
-    className="d-inline-block align-top"
-    alt="Aegion"
-  />
-  {' '}
-</Navbar.Brand>
-
+          <Navbar.Brand as={Link} to="/">
+            <img
+              src={`${process.env.PUBLIC_URL}/logo.png`}
+              width="100"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Aegion"
+            />
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -114,30 +113,48 @@ function App() {
               <Nav.Link href="#how-to-play">遊び方</Nav.Link>
               <Nav.Link href="#gallery">ギャラリー</Nav.Link>
               <Nav.Link href="#news">ニュース</Nav.Link>
+              <Nav.Link as={Link} to="/userpage">ユーザーページ</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+    );
+}
 
-      <div id="home">
-        <Home />
+function AppHome() {
+  return (
+      <div className="App">
+        <Header />
+
+        <div id="home">
+          <Home />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="story">
+          <Story />
+        </div>
+        <div id="how-to-play">
+          <HowToPlay />
+        </div>
+        <div id="gallery">
+          <Gallery />
+        </div>
+        <div id="news">
+          <News />
+        </div>
+
       </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="story">
-        <Story />
-      </div>
-      <div id="how-to-play">
-        <HowToPlay />
-      </div>
-      <div id="gallery">
-        <Gallery />
-      </div>
-      <div id="news">
-        <News />
-      </div>
-    </div>
+    );
+}
+
+function App() {
+  return (
+       <Routes>
+           <Route path="/" element={<AppHome />} />
+           <Route path="/userpage" element={<UserPage />} />
+       </Routes>
   );
 }
 
