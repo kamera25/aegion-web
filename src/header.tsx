@@ -20,7 +20,7 @@ function Header () {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">ホーム</Nav.Link>
-              <Nav.Link as={Link} to="/userpage">ユーザーページ</Nav.Link>
+              <Nav.Link as={Link} to="/userpage">ユーザーサポート</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
