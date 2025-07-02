@@ -10,7 +10,7 @@ function Home() {
   return (
     <header className="App-header">
       <h1>Aegion</h1>
-      <p>これは 見えざる者 と 見える者 との戦いも物語</p>
+      <p>これは 見えざる者 と 見える者 が織りなす戦いの物語</p>
     </header>
   );
 }
