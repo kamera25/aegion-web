@@ -34,7 +34,11 @@ function About() {
     <li>マスカード × 60枚（攻撃／防御／特殊カード含む）</li>
     <li>サイコロ × 2個</li>
     <li>ゲームマット × 1枚</li>
-    <li>Xreal Ultra（ARグラス）※別売となります。</li>
+  </ul>
+  <h4>‼️ 別途お買い求めが必要な物：</h4>
+  <ul>
+    <li>XREAL Air 2 Ultra（ARグラス）- Xreal One や One Proでは動作検証しておりません。</li>
+    <li>XREAL Air 2 Ultra が動作するスマートフォン - <a href='https://jp.shop.xreal.com/products/xreal-air-2-ultra'>こちら</a> をご確認ください</li>   
   </ul>
 </section>
 
