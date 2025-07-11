@@ -23,7 +23,7 @@ function About() {
     <Container className="my-5">
 <section>
   <h2><strong>Aegion - エイジオン</strong></h2>
-  <h3>A TACTICAL AR BOAD GAME</h3>
+  <h3>A Tactical Board Game for AR Glasses</h3>
 
   <h4>🧩 プレイ人数：</h4>
   <p>2〜4人（協力プレイ）</p>
@@ -53,6 +53,7 @@ function About() {
 
     <img 
       src={`${process.env.PUBLIC_URL}/starterpack.jpg`} 
+      style={{ width: '100%', maxWidth: '550px', height: 'auto' }}
       alt='スターターパックの画像'
     />
 
@@ -69,9 +70,9 @@ function Story() {
 
       <p>しかし、その目覚めに呼応するように、"選ばれし戦士たち"が現れる。</p>
 
-      <p>“不可視の戦場”で人知れず戦いは始まっている。彼らだけに見える"理"。彼らだけが踏み入れることのできる戦場。</p>
+      <p>“不可視の戦場”で人知れず戦いは始まった。彼らだけに見える"理"。彼らだけが踏み入れることのできる戦場。</p>
 
-      <h4>これは、世界が気づかぬまま終わりへ向かう中での、“見えざる戦士たち”の物語。</h4>
+      <h4>これは、世界が気づかぬまま終わりへ向かう中、立ち向かう“戦士たち”の物語。</h4>
     </Container>
   );
 }
