@@ -51,7 +51,10 @@ function About() {
   </ul>
 </section>
 
-    <img src={`${process.env.PUBLIC_URL}/starterpack.jpg`} />
+    <img 
+      src={`${process.env.PUBLIC_URL}/starterpack.jpg`} 
+      alt='スターターパックの画像'
+    />
 
     </Container>
   );
