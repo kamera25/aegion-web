@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import './App.css';
 import Header from './header';
 import Footer from './footer';
+import ModalImage from './ModalImage';
 
 function AppDownload() {
   return (
@@ -11,7 +12,11 @@ function AppDownload() {
       <p>アプリのダウンロードは、以下のリンクからどうぞ。</p>
       <p>最終更新日: 2025年7月13日</p>
 
-      <button className="download-button">
+      <button className="download-button"
+        onClick={() => {
+          window.location.href = "https://drive.google.com/drive/folders/1g_BAW973Z73qcZMdjj2I8iLDhk9jTbDg?usp=share_link";
+        }}
+      >
         <img
               src={`${process.env.PUBLIC_URL}/download.svg`}
               width="30"
@@ -49,6 +54,36 @@ function AppUpdateInfo() {
     </Container>
   );
 }
+
+function GameMat() {
+  return (
+    <Container className="my-5">
+      <h2>ゲームマット</h2>
+      <ModalImage
+        src={`${process.env.PUBLIC_URL}/PlayMatA2_2.png`}
+            width={350}
+            height={250}
+            className="d-inline-block align-top"
+            alt="遊び方"
+      />
+      <p>ゲームマットは以下のページからダウンロードできます。(外部サイトに飛びます)</p>
+      <button 
+          className="download-button"
+          onClick={() => {
+          window.location.href = "https://drive.google.com/drive/folders/1g_BAW973Z73qcZMdjj2I8iLDhk9jTbDg?usp=share_link";
+      }}>
+        <img
+              src={`${process.env.PUBLIC_URL}/download.svg`}
+              width="30"
+              height="30"
+              alt="ゲームマットをダウンロードする"
+            />
+            ダウンロードをする
+      </button>
+    </Container>
+  );
+}
+
 
 function UserPage() {
   return (
@@ -105,6 +140,10 @@ function UserPageApp() {
 
         <div id="update">
           <AppUpdateInfo />
+        </div>
+
+        <div id="gamemat">
+          <GameMat />
         </div>
 
         <div id="support">

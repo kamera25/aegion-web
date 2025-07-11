@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import UserPage from './UserPage';
 import Header from './header';
 import Footer from './footer';
+import type { CSSProperties } from 'react';
+import ModalImage from './ModalImage';
+
 
 function Home() {
   return (
@@ -26,14 +29,19 @@ function About() {
   <p>2〜4人（協力プレイ）</p>
 
   <h4>⏱ 所要時間：</h4>
-  <p>1プレイ 約20〜30分</p>
+  <p>1プレイ 約10分</p>
 
   <h4>📦 内容物：</h4>
   <ul>
     <li>ボスカード × 5枚</li>
-    <li>マスカード × 60枚（攻撃／防御／特殊カード含む）</li>
+    <li>マスカード × 40枚</li>
     <li>サイコロ × 2個</li>
-    <li>ゲームマット × 1枚</li>
+    <li>兵士コマ × 3個</li>
+    <li>神器コマ(守護者・ランダム封入) × 1個</li>
+  </ul>
+  <h4>🙏 ご準備いただくもの：</h4>
+  <ul>
+    <li>ARゲームマット × 1枚 (A3 2枚/本サイトで配布中)</li>
   </ul>
   <h4>‼️ 別途お買い求めが必要な物：</h4>
   <ul>
@@ -41,6 +49,8 @@ function About() {
     <li>XREAL Air 2 Ultra が動作するスマートフォン - <a href='https://jp.shop.xreal.com/products/xreal-air-2-ultra'>こちら</a> をご確認ください</li>   
   </ul>
 </section>
+
+    <img src={`${process.env.PUBLIC_URL}/starterpack.jpg`} />
 
     </Container>
   );
@@ -51,7 +61,7 @@ function Story() {
     <Container className="my-5">
       <h2>ストーリー</h2>
       <p>遥か昔、人の目には映らぬ“異界”を見通し、巨悪を封じていた存在──それが“守護者”たちだった。</p>
-      <p>──永き月日は経ち、地は裂け、忘却の彼方に封じられていた五つの“巨悪”──それぞれ異なる異能と意志を持つ”ソレ”が、再び現世に侵攻を始めたのだ。</p>
+      <p>──永き月日は経ち、地は裂け、忘却の彼方に封じられていた五つの“巨悪”──それぞれ異なる異能と意志を持つ"理"が、再び現世に侵攻を始めたのだ。</p>
 
       <p>しかし、その目覚めに呼応するように、選ばれし者たちが現れる。</p>
 
@@ -66,16 +76,15 @@ function HowToPlay() {
   return (
     <Container className="my-5">
       <h2>遊び方</h2>
-      <p>以下のガイドブックでご確認ください。(製品版にはガイドブックが同梱されています)</p>
-      <a href={`${process.env.PUBLIC_URL}/HowToPlay.png`}>
-        <img
-          src={`${process.env.PUBLIC_URL}/HowToPlay.png`}
-          width="350"
-          height="250"
-          className="d-inline-block align-top"
-          alt="Aegion"
-        />
-      </a>
+      <p>以下の遊び方マニュアルをご確認ください。</p>
+      <ModalImage
+        src={`${process.env.PUBLIC_URL}/HowToPlay.png`}
+            width={350}
+            height={250}
+            className="d-inline-block align-top"
+            alt="遊び方"
+      />
+
     </Container>
   );
 }
@@ -85,6 +94,7 @@ function Gallery() {
     <Container className="my-5">
       <h2>ギャラリー</h2>
       <p>このゲームのコンセプトアートをご紹介します</p>
+      <ThumbnailGallery />
     </Container>
   );
 }
@@ -127,6 +137,76 @@ function AppHome() {
     );
 }
 
+
+const galleryStyle: CSSProperties = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '10px',
+};
+
+const thumbnailStyle: CSSProperties = {
+  width: '170px',
+  height: '170px',
+  objectFit: 'cover',
+  borderRadius: '8px',
+  cursor: 'pointer',
+};
+
+const modalOverlayStyle: CSSProperties = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0,0,0,0.6)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  zIndex: 1000,
+};
+
+const modalImageStyle: CSSProperties = {
+  maxWidth: '90%',
+  maxHeight: '90%',
+  borderRadius: '12px',
+};
+
+const ThumbnailGallery = () => {
+  const thumbnails = [
+    `${process.env.PUBLIC_URL}/gallery/01.png`,
+    `${process.env.PUBLIC_URL}/gallery/02.png`,
+    // 必要に応じて追加
+  ];
+
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  return (
+    <>
+      <div style={galleryStyle}>
+        {thumbnails.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Thumbnail ${index}`}
+            style={thumbnailStyle}
+            onClick={() => setSelectedImage(src)}
+          />
+        ))}
+      </div>
+
+      {selectedImage && (
+        <div style={modalOverlayStyle} onClick={() => setSelectedImage(null)}>
+          <img src={selectedImage} alt="拡大画像" style={modalImageStyle} />
+        </div>
+      )}
+    </>
+  );
+}
+
+
+
+
 function App() {
   return (
     <HashRouter>
@@ -137,5 +217,8 @@ function App() {
     </HashRouter>
   );
 }
+
+
+
 
 export default App;
