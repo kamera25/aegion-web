@@ -58,7 +58,7 @@ function AppUpdateInfo() {
 function GameMat() {
   return (
     <Container className="my-5">
-      <h2>ゲームマット</h2>
+      <h2>ゲームマット & 遊び方シート</h2>
       <ModalImage
         src={`${process.env.PUBLIC_URL}/PlayMatA2_2.png`}
             width={350}
@@ -66,7 +66,7 @@ function GameMat() {
             className="d-inline-block align-top"
             alt="遊び方"
       />
-      <p>ゲームマットは以下のページからダウンロードできます。(外部サイトに飛びます)</p>
+      <p>以下のページから印刷用ファイルがダウンロードできます。(外部サイトに飛びます)</p>
       <button 
           className="download-button"
           onClick={() => {
@@ -80,6 +80,8 @@ function GameMat() {
             />
             ダウンロードをする
       </button>
+      <br></br><br></br>
+      <p>なお <strong>ゲームマット</strong> は <strong>A2印刷用</strong> と コンビニでも印刷できる <strong>A3印刷用(2枚刷り)</strong> をご用意してます。</p>
     </Container>
   );
 }

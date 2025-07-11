@@ -23,7 +23,7 @@ function About() {
     <Container className="my-5">
 <section>
   <h2><strong>Aegion - エイジオン</strong></h2>
-  <p>A TACTICAL AR BOAD GAME</p>
+  <h3>A TACTICAL AR BOAD GAME</h3>
 
   <h4>🧩 プレイ人数：</h4>
   <p>2〜4人（協力プレイ）</p>
@@ -38,6 +38,7 @@ function About() {
     <li>サイコロ × 2個</li>
     <li>兵士コマ × 3個</li>
     <li>神器コマ(守護者・ランダム封入) × 1個</li>
+    <li>ストーリー・マニュアルカード x 各1枚</li>
   </ul>
   <h4>🙏 ご準備いただくもの：</h4>
   <ul>

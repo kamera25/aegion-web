@@ -23,6 +23,29 @@ function Header () {
               <Nav.Link as={Link} to="/userpage">ユーザーサポート</Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          
+          <Nav className="ms-auto flex-row">
+            <Nav.Link as={Link} to="https://x.com/HiroshimaUnity" className="mx-2">
+              <img
+                src={`${process.env.PUBLIC_URL}/alpha-x-box-outline.svg`}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="GitHub"
+              />
+            </Nav.Link>
+            <Nav.Link as={Link} to="https://github.com/kamera25" className="mx-2">
+              <img
+                src={`${process.env.PUBLIC_URL}/github.svg`}
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="GitHub"
+              />
+            </Nav.Link>
+          </Nav>
+
+
         </Container>
       </Navbar>
     );
