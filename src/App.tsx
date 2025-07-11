@@ -13,7 +13,7 @@ function Home() {
   return (
     <header className="App-header">
       <h1>Aegion</h1>
-      <p>これは 見えざる者 と 見える者 が織りなす戦いの物語</p>
+      <p>これは 見えざる者 と 見える者 による戦いの物語</p>
     </header>
   );
 }
@@ -31,7 +31,7 @@ function About() {
   <h4>⏱ 所要時間：</h4>
   <p>1プレイ 約10分</p>
 
-  <h4>📦 内容物：</h4>
+  <h4>📦 Aegionスターターキット 内容物(頒布品)：</h4>
   <ul>
     <li>ボスカード × 5枚</li>
     <li>マスカード × 40枚</li>
