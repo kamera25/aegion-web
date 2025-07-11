@@ -80,7 +80,7 @@ function HowToPlay() {
   return (
     <Container className="my-5">
       <h2>遊び方</h2>
-      <p>以下の遊び方マニュアルをご確認ください。</p>
+      <p>以下、遊び方マニュアルをご確認ください。</p>
       <ModalImage
         src={`${process.env.PUBLIC_URL}/HowToPlay.png`}
             width={350}
@@ -97,7 +97,7 @@ function Gallery() {
   return (
     <Container className="my-5">
       <h2>ギャラリー</h2>
-      <p>このゲームのコンセプトアートをご紹介します</p>
+      <p>このゲームのコンセプトアートをご紹介します！</p>
       <ThumbnailGallery />
     </Container>
   );
@@ -179,6 +179,7 @@ const ThumbnailGallery = () => {
   const thumbnails = [
     `${process.env.PUBLIC_URL}/gallery/01.png`,
     `${process.env.PUBLIC_URL}/gallery/02.png`,
+    `${process.env.PUBLIC_URL}/gallery/03.png`,
     // 必要に応じて追加
   ];
 
