@@ -36,7 +36,7 @@ function AppRestrict() {
       <h2>アプリの利用について</h2>
       <ul>        
         <li><p>このアプリは XREAL Air 2 Ultra と、「開発互換性」のある Android 端末でのみ動作します。<a href='https://developer.xreal.com/?lang=ja'>こちらをご参照ください。</a></p></li>
-        <li><p>利用するにあたって、Xreal社が提供する <a href='https://developer.xreal.com/download'>Control Glasses 1.1.0 アプリ</a> のインストールも必要です。</p></li>
+        <li><p>利用するにあたって、XREAL 社が提供する <a href='https://developer.xreal.com/download'>Control Glasses 1.1.0 アプリ</a> のインストールも必要です。</p></li>
         <li><p>インストールするにあたってAndroid は開発者モードに設定しておく必要があります。<a href='https://developer.android.com/studio/debug/dev-options'>こちらの手順</a>に従ってください。</p></li>
         <li><p>Apple iPhoneでは動作しません。</p></li>
         <li><p>本アプリは予告なく動作を変更する可能性があります。</p></li>

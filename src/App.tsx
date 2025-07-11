@@ -46,7 +46,7 @@ function About() {
   </ul>
   <h4>‼️ 別途お買い求めが必要な物：</h4>
   <ul>
-    <li>XREAL Air 2 Ultra（ARグラス）- Xreal One や Xreal One Proでは動作しません。</li>
+    <li>XREAL Air 2 Ultra（ARグラス）- XREAL One や XREAL One Proでは動作しません。</li>
     <li>XREAL Air 2 Ultra が動作するスマートフォン - <a href='https://jp.shop.xreal.com/products/xreal-air-2-ultra'>こちら</a> をご確認ください</li>   
   </ul>
 </section>
