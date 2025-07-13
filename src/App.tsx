@@ -12,6 +12,19 @@ import ModalImage from './ModalImage';
 function Home() {
   return (
     <header className="App-header">
+        <video
+          className="background-video"
+          src={`${process.env.PUBLIC_URL}/movie/ageion_op.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            width: '80%',
+            maxWidth: '600px',
+            borderRadius: '10px',
+          }}
+        />
       <h1>Aegion</h1>
       <p>これは 見えざる者 と 見える者 による戦いの物語</p>
     </header>
@@ -22,7 +35,7 @@ function About() {
   return (
     <Container className="my-5">
 <section>
-  <h3><a href='https://drive.google.com/drive/folders/1g_BAW973Z73qcZMdjj2I8iLDhk9jTbDg?usp=share_link'>たちまる限定！フリー版公開中！！！ - こちらからどうぞ！(Google Drive)</a></h3>
+  <h3><a href='https://drive.google.com/drive/folders/1g_BAW973Z73qcZMdjj2I8iLDhk9jTbDg?usp=share_link'>たげまる限定！フリー版公開中！！！ - こちらからどうぞ！(Google Drive)</a></h3>
 
   <h2><strong>Aegion - エイジオン</strong></h2>
   <h3>A Tactical Board Game for AR Glasses</h3>
