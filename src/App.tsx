@@ -22,6 +22,8 @@ function About() {
   return (
     <Container className="my-5">
 <section>
+  <h3><a href='https://drive.google.com/drive/folders/1g_BAW973Z73qcZMdjj2I8iLDhk9jTbDg?usp=share_link'>たちまる限定！フリー版公開中！！！ - こちらからどうぞ！(Google Drive)</a></h3>
+
   <h2><strong>Aegion - エイジオン</strong></h2>
   <h3>A Tactical Board Game for AR Glasses</h3>
 
